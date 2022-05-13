@@ -22,7 +22,7 @@ export class TodoInputAddIntesComponent implements OnInit {
       this.emitItemTaskList.emit(this.addItemTaskList);
       this.addItemTaskList="";
     }else{
-      const confirm = window.alert("Não podemos inserir intens em branco. Favor digitar um item!");
+      const confirm = window.alert("Não podemos inserir itens em branco. Favor digitar um item!");
     }
   }
 
