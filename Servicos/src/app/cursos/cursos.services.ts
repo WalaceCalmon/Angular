@@ -1,7 +1,7 @@
 export class CursosService{
 
   getCursos(){
-    return ['Angulae 13', 'Java', 'C#'];
+    return ['Angular 13', 'Java', 'C#'];
   }
 
 }
