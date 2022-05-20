@@ -1,5 +1,3 @@
-import { CursoNaoEncontradoComponent } from './cursos/curso-nao-encontrado/curso-nao-encontrado.component';
-import { CursoDetalheComponent } from './cursos/curso-detalhe/curso-detalhe.component';
 import { ModuleWithProviders } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
