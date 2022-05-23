@@ -3,11 +3,14 @@
   <br>
 
   <span class="p-float-label">
-    <input id="float-input" type="text" pInputText>
+    <input #inputValeu id="float-input" type="text" pInputText>
     <label for="float-input">Informe outra comida</label>
   </span>
   <br>
-  <button pButton pRipple  icon="pi pi-check" label="Salvar" class="p-button-raised p-button-secondary"></button>
+  <button
+    pButton pRipple (click)="listAddFoodList(inputValeu.value)" icon="pi pi-check"
+    label="Salvar" class="p-button-raised p-button-secondary">
+  </button>
 
   <ul>
     <li *ngFor="let foodLists of foodList">

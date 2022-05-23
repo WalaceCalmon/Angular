@@ -18,6 +18,9 @@ export class FoodListComponent implements OnInit {
     this.foodList = this.foodListService.getFoodList();
   }
 
+  public listAddFoodList(item: string){
+    return this.foodListService.addFoodList(item);
+  }
 
   handleClick() {
       //execute action
