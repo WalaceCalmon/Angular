@@ -39,6 +39,19 @@ export class FoodListComponent implements OnInit {
     );
   }
 
+  public deleteAddFoodList(id: number){
+    return this.foodListService.deleteFoodList(id).subscribe({
+      next: (res: FoodList) => {
+        this.foodList = this.foodList.filter(
+          item => {
+            return id !== item.id;
+          }
+        )
+      },
+      error: (err: Error) => err
+    });
+  }
+
   handleClick() {
       //execute action
   }
