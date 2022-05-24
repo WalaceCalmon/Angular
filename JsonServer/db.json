@@ -1,3 +1,12 @@
 {
-  "list-food": []
+  "list-food": [
+    {
+      "nome": "Macarrão",
+      "id": 1
+    },
+    {
+      "nome": "Arroz",
+      "id": 2
+    }
+  ]
 }

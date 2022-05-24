@@ -32,14 +32,14 @@ export class FoodListComponent implements OnInit {
     });
   }
 
-  public listAddFoodList(item: string){
+  public foodListAdd(item: string){
     return this.foodListService.addFoodList(item).subscribe(
       res => this.foodListService.listFoodListAlert(res),
       error => error
     );
   }
 
-  public deleteAddFoodList(id: number){
+  public foodListDeleta(id: number){
     return this.foodListService.deleteFoodList(id).subscribe({
       next: (res: FoodList) => {
         this.foodList = this.foodList.filter(
@@ -48,6 +48,13 @@ export class FoodListComponent implements OnInit {
           }
         )
       },
+      error: (err: Error) => err
+    });
+  }
+
+  public foodListEdit(nome: string, id: number){
+    this.foodListService.editFoodList(nome, id).subscribe({
+      next: (res: FoodList) => (res),
       error: (err: Error) => err
     });
   }
