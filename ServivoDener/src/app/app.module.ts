@@ -1,3 +1,4 @@
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
@@ -25,7 +26,8 @@ import { FoodListComponent } from './shared/food-list/food-list.component';
     InputTextModule,
     ButtonModule,
     BrowserAnimationsModule,
-    RippleModule
+    RippleModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

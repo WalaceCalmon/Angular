@@ -16,8 +16,8 @@
       </button>
 
       <ul>
-        <li *ngFor="let foodLists of foodList">
-          {{ foodLists }}
+        <li *ngFor="let item of foodList">
+          {{item.id}} - {{ item.nome }}
         </li>
       </ul>
     </section>
