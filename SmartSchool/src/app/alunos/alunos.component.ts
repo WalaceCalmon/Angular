@@ -9,6 +9,8 @@ export class AlunosComponent implements OnInit {
 
   constructor() { }
 
+  public alunos: string [] = [];
+
   ngOnInit(): void {
   }
 
