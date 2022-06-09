@@ -5,8 +5,10 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { LancamentosComponent } from './lancamentos/lancamentos.component';
 
 const routes: Routes = [
-  { path: '', component: DashboardComponent, pathMatch: "full"},
-  { path: 'lacamentos', component: LancamentosComponent }
+  {path: '', redirectTo: 'dashboard', pathMatch: "full"},
+  { path: 'dashboard', component: DashboardComponent},
+  { path: 'lacamentos', component: LancamentosComponent },
+
 ];
 
 @NgModule({
