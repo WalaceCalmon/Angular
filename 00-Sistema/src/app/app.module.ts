@@ -17,6 +17,9 @@ import { AppComponent } from './app.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { LancamentosComponent } from './lancamentos/lancamentos.component';
 import { MenuComponent } from './menu/menu.component';
+import { ConfiguracaoComponent } from './configuracao/configuracao.component';
+import { TesteComponent } from './teste/teste.component';
+import { HomeComponent } from './home/home.component';
 
 
 @NgModule({
@@ -24,7 +27,10 @@ import { MenuComponent } from './menu/menu.component';
     AppComponent,
     LancamentosComponent,
     MenuComponent,
-    DashboardComponent
+    DashboardComponent,
+    ConfiguracaoComponent,
+    TesteComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

@@ -9,15 +9,16 @@ import {MenuItem} from 'primeng/api';
 export class MenuComponent implements OnInit {
 
   menuItems: MenuItem[] = [];
-
+  activeItem: MenuItem = this.menuItems[0];
   ngOnInit() {
      this.menuItems = [
-      { label: 'Home', routerLink:"/", icon: 'pi pi-fw pi-home'},
+      { label: 'home',  routerLink:"/home", icon: 'pi pi-fw pi-home'},
       { label: 'Lançamentos', routerLink:"/lancamentos", icon: 'pi pi-dollar'},
-      { label: 'XXXXXX', icon: 'pi pi-fw pi-pencil'},
-      { label: 'XXXXXXX', icon: 'pi pi-fw pi-file'},
-      { label: 'Configurações', icon: 'pi pi-fw pi-cog'},
+      { label: 'Dashboard', routerLink:"/dashboard", icon: 'pi pi-fw pi-pencil'},
+      { label: 'Teste', routerLink:"/teste", icon: 'pi pi-fw pi-pencil'},
+      { label: 'Configurações', routerLink:"/configuracao", icon: 'pi pi-fw pi-cog'},
     ];
+    this.activeItem = this.menuItems[0];
   }
 
   constructor() {
