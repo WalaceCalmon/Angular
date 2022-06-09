@@ -5,6 +5,7 @@ import { RouterModule } from '@angular/router';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { AccordionModule } from 'primeng/accordion';
 import { PrimeNGConfig } from 'primeng/api';
+import { ButtonModule } from 'primeng/button';
 import { CardModule } from 'primeng/card';
 import { InputMaskModule } from 'primeng/inputmask';
 import { InputTextModule } from 'primeng/inputtext';
@@ -36,11 +37,10 @@ import { MenuComponent } from './menu/menu.component';
     AccordionModule,
     CardModule,
     InputMaskModule,
-    RouterModule
-
-
+    RouterModule,
+    ButtonModule
   ],
-  providers: [PrimeNGConfig],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

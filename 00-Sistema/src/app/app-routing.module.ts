@@ -7,7 +7,7 @@ import { LancamentosComponent } from './lancamentos/lancamentos.component';
 const routes: Routes = [
   {path: '', redirectTo: 'dashboard', pathMatch: "full"},
   { path: 'dashboard', component: DashboardComponent},
-  { path: 'lacamentos', component: LancamentosComponent },
+  { path: 'lancamentos', component: LancamentosComponent },
 
 ];
 
