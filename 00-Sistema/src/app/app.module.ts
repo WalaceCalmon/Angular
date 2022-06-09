@@ -1,3 +1,4 @@
+import { TableModule } from 'primeng/table';
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
@@ -6,12 +7,12 @@ import { RouterModule } from '@angular/router';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { AccordionModule } from 'primeng/accordion';
 import { ButtonModule } from 'primeng/button';
+import { CalendarModule } from 'primeng/calendar';
 import { CardModule } from 'primeng/card';
 import { InputMaskModule } from 'primeng/inputmask';
 import { InputTextModule } from 'primeng/inputtext';
 import { MenuModule } from 'primeng/menu';
 import { TabMenuModule } from 'primeng/tabmenu';
-import {CalendarModule} from 'primeng/calendar';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -47,7 +48,8 @@ import { TesteComponent } from './teste/teste.component';
     RouterModule,
     ButtonModule,
     ReactiveFormsModule,
-    CalendarModule
+    CalendarModule,
+    TableModule
   ],
   providers: [],
   bootstrap: [AppComponent]
