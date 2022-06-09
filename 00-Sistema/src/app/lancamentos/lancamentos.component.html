@@ -1,20 +1,22 @@
 <br>
-<section class="container">
-  <div class="field">
-    <label>Descrição</label>
-    <span>
-      <input id="float-input" type="text" pInputText class="w-full">
-    </span>
-    <br>
+<form [formGroup]="lancamentoBusca">
+  <section class="container">
     <div class="field">
-      <label style="display: block">Vencimento</label>
-      <span class="w-full">
-        <p-inputMask mask="99/99/9999" placeholder="Data inicial"></p-inputMask>
-        <label> até </label>
-        <p-inputMask mask="99/99/9999" placeholder="Data final"></p-inputMask>
+      <label>Descrição</label>
+      <span style="display: block">
+        <input id="float-input" type="text" pInputText class="w-full" formControlName="descricao">
       </span>
+      <br>
+      <div class="field">
+        <label style="display: block">Vencimento</label>
+        <span class="w-full">
+          <p-calendar placeholder="Data inicial" formControlName="dataInicial"></p-calendar>
+          <label> até </label>
+          <p-calendar placeholder="Data final" formControlName="datafinal"></p-calendar>
+        </span>
+      </div>
+      <button pButton pRipple type="button" (click)="submitForm()" label="Pesquisar" class="p-button-raised p-button-secondary"></button>
     </div>
-    <button pButton pRipple type="button" label="Pesquisar" class="p-button-raised p-button-secondary"></button>
-  </div>
-</section>
+  </section>
+</form>
 
