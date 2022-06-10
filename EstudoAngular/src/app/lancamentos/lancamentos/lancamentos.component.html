@@ -21,28 +21,3 @@
     </div>
   </section>
 </form>
-
-<div>
-  <p-table [paginator]="true" [rows]="10" [showCurrentPageReport]="true" responsiveLayout="scroll"
-  currentPageReportTemplate="De {first} até {last}. {totalRecords} no total" [rowsPerPageOptions]="[5,10,20,50]">
-    <ng-template pTemplate="header">
-      <tr>
-        <th>Id</th>
-        <th>Nome</th>
-        <th>Categoria</th>
-        <th>Quantidade</th>
-      </tr>
-    </ng-template>
-    <ng-template pTemplate="body" let-product>
-      <tr>
-        <td>{{product.code}}</td>
-        <td>{{product.name}}</td>
-        <td>{{product.category}}</td>
-        <td>{{product.quantity}}</td>
-      </tr>
-    </ng-template>
-    <ng-template pTemplate="paginatorleft">
-      <p-button label="Novo lançamento" type="button" icon="pi pi-plus"  styleClass="p-button-text"></p-button>
-    </ng-template>
-  </p-table>
-</div>
