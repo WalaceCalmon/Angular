@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { MenuComponent } from './menu/menu.component';
 
 const routes: Routes = [
-  {
-    path: 'lancamentos',
-    loadChildren: () => import('./lancamentos/lancamentos.module').then( m => m.LancamentosModule)}
+  { path:'', component:MenuComponent,pathMatch:"full" },
+  { path: 'lancamento',loadChildren: () => import('./lancamento/lancamento.module').then(m => m.LancamentoModule) }
 ];
 
 @NgModule({

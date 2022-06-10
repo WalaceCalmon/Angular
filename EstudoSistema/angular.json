@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "EstudoAngular": {
+    "EstudoSistema": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/estudo-angular",
+            "outputPath": "dist/estudo-sistema",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -28,10 +28,6 @@
               "src/assets"
             ],
             "styles": [
-              ".//node_modules/primeflex/primeflex.css",
-              "./node_modules/primeicons/primeicons.css",
-              "./node_modules/primeng/resources/themes/bootstrap4-dark-blue/theme.css",
-              "./node_modules/primeng/resources/primeng.min.css",
               "src/styles.scss"
             ],
             "scripts": []
@@ -73,10 +69,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "EstudoAngular:build:production"
+              "browserTarget": "EstudoSistema:build:production"
             },
             "development": {
-              "browserTarget": "EstudoAngular:build:development"
+              "browserTarget": "EstudoSistema:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -84,7 +80,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "EstudoAngular:build"
+            "browserTarget": "EstudoSistema:build"
           }
         },
         "test": {

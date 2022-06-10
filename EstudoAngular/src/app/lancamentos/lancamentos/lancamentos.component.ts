@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { PrimeNGConfig } from 'primeng/api';
 
 @Component({
   selector: 'app-lancamentos',
@@ -7,9 +9,29 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LancamentosComponent implements OnInit {
 
-  constructor() { }
+  public lancamentoBusca: FormGroup = this.formBuilder.group({
+    descricao: [
+      null,[
+        Validators.required,
+        Validators.minLength(5),
+        Validators.maxLength(30)
+      ]
+    ],
+    dataRange: [null, Validators.required,]
+  })
 
-  ngOnInit(): void {
+  constructor(
+    private primengConfig: PrimeNGConfig,
+    private formBuilder: FormBuilder
+    ) { }
+
+
+  ngOnInit() {
+    this.primengConfig.ripple = true;
+  }
+
+  public submitForm(){
+    console.log(this.lancamentoBusca.value)
   }
 
 }

@@ -1,7 +1,10 @@
+import { LancamentosComponent } from './lancamentos/lancamentos.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-const routes: Routes = [];
+const routes: Routes = [
+  { path: '', component: LancamentosComponent }
+];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
