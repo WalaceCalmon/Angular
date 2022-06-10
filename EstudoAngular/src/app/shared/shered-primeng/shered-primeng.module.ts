@@ -9,6 +9,7 @@ import { InputTextModule } from 'primeng/inputtext';
 import { MenuModule } from 'primeng/menu';
 import { TableModule } from 'primeng/table';
 import { TabMenuModule } from 'primeng/tabmenu';
+import { RippleModule } from 'primeng/ripple';
 
 @NgModule({
   exports:[
@@ -21,7 +22,8 @@ import { TabMenuModule } from 'primeng/tabmenu';
     InputTextModule,
     MenuModule,
     TableModule,
-    TabMenuModule
+    TabMenuModule,
+    RippleModule
   ]
 })
 export class SheredPrimengModule { }

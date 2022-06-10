@@ -33,5 +33,7 @@ export class LancamentosComponent implements OnInit {
   public submitForm(){
     console.log(this.lancamentoBusca.value)
   }
-
+  handleClick() {
+     //execute action
+  }
 }

@@ -10,7 +10,9 @@
       <div class="field">
         <label style="display: block">Intervalo do Vencimento</label>
         <span class="w-full">
-          <p-calendar formControlName="dataRange"selectionMode="range" [readonlyInput]="true" inputId="range"></p-calendar>
+          <p-calendar
+            formControlName="dataRange" selectionMode="range"
+            [readonlyInput]="true" inputId="range"></p-calendar>
         </span>
       </div>
       <div>
@@ -40,7 +42,7 @@
       </tr>
     </ng-template>
     <ng-template pTemplate="paginatorleft">
-      <p-button label="Novo lançamento" type="button" icon="pi pi-plus" styleClass="p-button-text"></p-button>
+      <p-button label="Novo lançamento" type="button" icon="pi pi-plus"  styleClass="p-button-text"></p-button>
     </ng-template>
   </p-table>
 </div>

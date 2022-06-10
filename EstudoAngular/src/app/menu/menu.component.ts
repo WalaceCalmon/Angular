@@ -14,7 +14,7 @@ export class MenuComponent implements OnInit {
      this.menuItems = [
       { label: 'home', icon: 'pi pi-fw pi-home'},
       { label: 'Lançamentos', routerLink:"/lancamentos", icon: 'pi pi-dollar'},
-      { label: 'Dashboard', icon: 'pi pi-fw pi-pencil'},
+      { label: 'Dashboard', routerLink:"/dashboard", icon: 'pi pi-fw pi-pencil'},
       { label: 'Teste', icon: 'pi pi-fw pi-pencil'},
       { label: 'Configurações', icon: 'pi pi-fw pi-cog'},
     ];
