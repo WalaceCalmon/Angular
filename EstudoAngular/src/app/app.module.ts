@@ -1,3 +1,4 @@
+import { LancamentoModule } from './../../../EstudoSistema/src/app/lancamento/lancamento.module';
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
@@ -11,7 +12,6 @@ import { InputTextModule } from 'primeng/inputtext';
 import { MenuModule } from 'primeng/menu';
 import { TableModule } from 'primeng/table';
 import { TabMenuModule } from 'primeng/tabmenu';
-
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -27,6 +27,7 @@ import { MenuComponent } from './menu/menu.component';
     BrowserAnimationsModule,
     ReactiveFormsModule,
     AppRoutingModule,
+    LancamentoModule,
     AccordionModule,
     ButtonModule,
     CalendarModule,
