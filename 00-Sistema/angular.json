@@ -111,5 +111,7 @@
       }
     }
   },
-  "defaultProject": "00-Sistema"
+  "cli": {
+    "analytics": "fb37ed40-0ff3-4d97-a4b5-31c868d4c4e0"
+  }
 }

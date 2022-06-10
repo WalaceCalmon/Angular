@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { UntypedFormBuilder, UntypedFormGroup, Validators } from '@angular/forms';
 import { PrimeNGConfig } from 'primeng/api';
 
 @Component({
@@ -10,7 +10,7 @@ import { PrimeNGConfig } from 'primeng/api';
 export class LancamentosComponent implements OnInit {
 
 
-  public lancamentoBusca: FormGroup = this.formBuilder.group({
+  public lancamentoBusca: UntypedFormGroup = this.formBuilder.group({
     descricao: [
       null,[
         Validators.required,
@@ -18,13 +18,12 @@ export class LancamentosComponent implements OnInit {
         Validators.maxLength(30)
       ]
     ],
-    dataInicial: [null, Validators.required,],
-    datafinal:[null, Validators.required]
+    dataRange: [null, Validators.required,]
   })
 
   constructor(
     private primengConfig: PrimeNGConfig,
-    private formBuilder: FormBuilder
+    private formBuilder: UntypedFormBuilder
     ) { }
 
   handleClick() {

@@ -1,45 +1,46 @@
-<br>
-<form [formGroup]="lancamentoBusca">
-  <section class="container">
-    <div class="field">
-      <label>Descrição</label>
-      <span style="display: block">
-        <input id="float-input" type="text" pInputText class="w-full" formControlName="descricao">
-      </span>
-      <br>
+<p-card>
+  <form [formGroup]="lancamentoBusca">
+    <section class="container">
       <div class="field">
-        <label style="display: block">Vencimento</label>
-        <span class="w-full">
-          <p-calendar placeholder="Data inicial" formControlName="dataInicial"></p-calendar>
-          <label> até </label>
-          <p-calendar placeholder="Data final" formControlName="datafinal"></p-calendar>
+        <label>Descrição</label>
+        <span style="display: block">
+          <input id="float-input" type="text" pInputText class="w-full" formControlName="descricao">
         </span>
+        <br>
+        <div class="field">
+          <label style="display: block">Vencimento</label>
+          <span class="w-full">
+            <p-calendar formControlName="dataRange"selectionMode="range" [readonlyInput]="true" inputId="range"></p-calendar>
+          </span>
+        </div>
+        <button pButton pRipple type="button" (click)="submitForm()" label="Pesquisar" class="p-button-raised p-button-secondary"></button>
       </div>
-      <button pButton pRipple type="button" (click)="submitForm()" label="Pesquisar" class="p-button-raised p-button-secondary"></button>
-    </div>
-  </section>
-</form>
+    </section>
+  </form>
+</p-card>
 
 <div>
   <div>
-    <p-table responsiveLayout="scroll">
-      <ng-template pTemplate="header">
+    <p-card>
+      <p-table responsiveLayout="scroll">
+        <ng-template pTemplate="header">
           <tr>
-              <th>Code</th>
-              <th>Name</th>
-              <th>Category</th>
-              <th>Quantity</th>
+            <th>Id</th>
+            <th>Nome</th>
+            <th>Categoria</th>
+            <th>Quantidade</th>
           </tr>
-      </ng-template>
-      <ng-template pTemplate="body" let-product>
+        </ng-template>
+        <ng-template pTemplate="body" let-product>
           <tr>
-              <td>{{product.code}}</td>
-              <td>{{product.name}}</td>
-              <td>{{product.category}}</td>
-              <td>{{product.quantity}}</td>
+            <td>{{product.code}}</td>
+            <td>{{product.name}}</td>
+            <td>{{product.category}}</td>
+            <td>{{product.quantity}}</td>
           </tr>
-      </ng-template>
-    </p-table>
+        </ng-template>
+      </p-table>
+    </p-card>
   </div>
 </div>
 
