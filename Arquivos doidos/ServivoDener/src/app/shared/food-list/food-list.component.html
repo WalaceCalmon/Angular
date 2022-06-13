@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<header>
+  <body>
+    <section>
+      <h3>Lista de comida</h3>
+      <br>
+
+      <span class="p-float-label">
+        <input #inputValeu id="float-input" type="text" pInputText>
+        <label for="float-input">Informe uma comida</label>
+      </span>
+      <br>
+      <button
+        pButton pRipple (click)="foodListAdd(inputValeu.value)" icon="pi pi-check"
+        label="Salvar" class="p-button-raised p-button-secondary">
+      </button>
+
+      <ul>
+        <li *ngFor="let item of foodList">
+          {{item.id}} - <input type="text" [(ngModel)]="item.nome" (keyup.enter)="foodListEdit(item.nome, item.id)" pInputText>
+
+          &nbsp;&nbsp;
+
+          <button class="sizes"
+            pButton pRipple type="button" styleClass="p-button-sm"
+            (click)="foodListDeleta(item.id)"
+            icon="pi pi-trash" class="p-button-rounded p-button-secondary p-button-text"></button>
+        </li>
+      </ul>
+    </section>
+  </body>
+</header>
